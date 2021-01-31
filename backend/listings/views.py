@@ -33,21 +33,21 @@ class SearchView(APIView):
         queryset = queryset.filter(sale_type__iexact=sale_type)
 
         price = data['price']
-        if price == '$0+':
+        if price == '0':
             price = 0
-        elif price == '$200,000+':
+        elif price == '200000':
             price = 200000
-        elif price == '$400,000+':
+        elif price == '400000':
             price = 400000
-        elif price == '$600,000+':
+        elif price == '600000':
             price = 600000
-        elif price == '$800,000+':
+        elif price == '800000':
             price = 800000
-        elif price == '$1,000,000+':
+        elif price == '1000000':
             price = 1000000
-        elif price == '$1,200,000+':
+        elif price == '1200000':
             price = 1200000
-        elif price == '$1,500,000+':
+        elif price == '1500000':
             price = 1500000
         elif price == 'Any':
             price = -1
@@ -126,15 +126,15 @@ class SearchView(APIView):
                     queryset = queryset.exclude(slug__iexact=slug)
 
         has_photos = data['has_photos']
-        if has_photos == '1+':
+        if has_photos == 1:
             has_photos = 1
-        elif has_photos == '3+':
+        elif has_photos == 3:
             has_photos = 3
-        elif has_photos == '5+':
+        elif has_photos == 5:
             has_photos = 5
-        elif has_photos == '10+':
+        elif has_photos == 15:
             has_photos = 10
-        elif has_photos == '15+':
+        elif has_photos == 15:
             has_photos = 15
 
         for query in queryset:
