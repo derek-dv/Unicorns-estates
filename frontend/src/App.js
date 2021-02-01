@@ -25,7 +25,7 @@ function App() {
           <Route exact path="/listings" component={Listings} />
           <Route exact path="/listing/:id" component={ListingDetail} />
           <Route exact path="/signup" component={SignUp} />
-          <Route exact path="login" component={SignIn} />
+          <Route exact path="/login" component={SignIn} />
           <Route component={NotFound} />
         </Switch>
       </Router>

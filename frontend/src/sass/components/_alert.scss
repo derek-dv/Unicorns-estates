@@ -1,0 +1,16 @@
+.alert {
+  width: 100%;
+  color: $color-white;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  height: 4rem;
+  padding: 1rem 2rem;
+
+  &--success {
+    background-color: #28a745;
+  }
+
+  &--error {
+    background-color: #dc3545;
+  }
+}
