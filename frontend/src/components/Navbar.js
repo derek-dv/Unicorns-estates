@@ -65,7 +65,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           </li>
         </div>
       </div>
-      <Alert />
+      <Alert msg="Dummy" />
     </Fragment>
   );
 };

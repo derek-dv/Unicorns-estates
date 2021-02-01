@@ -27,7 +27,7 @@ export const login = (email, password) => async (dispatch) => {
     dispatch({
       type: all.LOGIN_FAIL,
     });
-    setAlert("Error authenticating", "error");
+    dispatch(setAlert("Error authenticating", "error"));
   }
 };
 
