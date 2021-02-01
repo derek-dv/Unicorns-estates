@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../actions/auth";
+import setAlert from "../actions/alert";
 
 const SignIn = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ const SignIn = ({ login, isAuthenticated }) => {
   };
 
   if (isAuthenticated) return <Redirect to="/" />;
+  setAlert("test", "success");
 
   return (
     <div className="auth">
@@ -51,6 +53,7 @@ const SignIn = ({ login, isAuthenticated }) => {
             placeholder="Password"
             onChange={(e) => onChange(e)}
             required
+            minLength="6"
             className="auth__form__input"
           />
         </div>

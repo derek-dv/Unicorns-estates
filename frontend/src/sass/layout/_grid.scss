@@ -2,8 +2,10 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  padding: 0 6rem;
+
   @include respond(big-desktop) {
-    max-width: 0;
+    max-width: none;
   }
 
   &:not(:last-child) {
@@ -25,7 +27,7 @@
 
   @include clearfix;
 
-  [class^="col"] {
+  [class^="col-"] {
     float: left;
 
     &:not(:last-child) {

@@ -126,16 +126,17 @@ class SearchView(APIView):
                     queryset = queryset.exclude(slug__iexact=slug)
 
         has_photos = data['has_photos']
-        if has_photos == 1:
-            has_photos = 1
-        elif has_photos == 3:
-            has_photos = 3
-        elif has_photos == 5:
-            has_photos = 5
-        elif has_photos == 15:
-            has_photos = 10
-        elif has_photos == 15:
-            has_photos = 15
+        # if has_photos == 1:
+        #     has_photos = 1
+        # elif has_photos == 3:
+        #     has_photos = 3
+        # elif has_photos == 5:
+        #     has_photos = 5
+        # elif has_photos == 15:
+        #     has_photos = 10
+        # elif has_photos == 15:
+        #     has_photos = 15
+        # elif has_photos == "Any"
 
         for query in queryset:
             count = 0

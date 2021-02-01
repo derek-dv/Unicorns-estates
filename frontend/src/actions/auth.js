@@ -40,12 +40,14 @@ export const signup = (name, email, password, password2) => (dispatch) => {
 
   const body = JSON.stringify({ name, email, password, password2 });
   axios
-    .post("http://localhost:8000/api/accounts/signup", body, config)
+    .post("http://localhost:8000/api/accounts/signup/", body, config)
     .then((res) => {
       dispatch({
         type: all.SIGNUP_SUCCESS,
         payload: res.data,
       });
+
+      if (res.data.error) return dispatch(setAlert(res.data.error, "error"));
 
       dispatch(login(email, password));
     })
